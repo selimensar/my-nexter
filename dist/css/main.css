@@ -1,1 +1,140 @@
-/*! project-name v0.0.1 | (c) 2020 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
+/*! my-nexter v0.0.1 | (c) 2020 Selim Ensar Koksal | MIT License | http://link-to-your-git-repo.com */
+/* line 17, src/sass/_base.scss */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* line 25, src/sass/_base.scss */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+/* line 30, src/sass/_base.scss */
+body {
+  font-family: "Nunito", sans-serif;
+  color: #6D5D4B;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* line 38, src/sass/_base.scss */
+.container {
+  display: grid;
+  grid-template-rows: 80vh -webkit-min-content 40vw repeat(3, -webkit-min-content);
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+/* line 1, src/sass/_typography.scss */
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+
+/* line 18, src/sass/_typography.scss */
+.heading-4 {
+  font-size: 1.9rem;
+}
+
+/* line 22, src/sass/_typography.scss */
+.heading-4--light {
+  color: #color-grey-light-1;
+}
+
+/* line 23, src/sass/_typography.scss */
+.heading-4--dark {
+  color: #color-grey-dark-1;
+}
+
+/* line 1, src/sass/_sidebar.scss */
+.sidebar {
+  background-color: #c69963;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1;
+}
+
+/* line 1, src/sass/_header.scss */
+.header {
+  background-color: #54483A;
+  grid-column: full-start / col-end 6;
+}
+
+/* line 1, src/sass/_realtors.scss */
+.realtors {
+  background-color: #101d2c;
+  grid-column: col-start 7 / full-end;
+}
+
+/* line 1, src/sass/_features.scss */
+.features {
+  grid-column: center-start / center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+/* line 14, src/sass/_features.scss */
+.feature {
+  display: grid;
+  grid-template-columns: -webkit-min-content 1fr;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+}
+
+/* line 21, src/sass/_features.scss */
+.feature__icon {
+  fill: #c69963;
+  width: 4.5rem;
+  height: 4.5rem;
+  grid-row: 1 / span 2;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+/* line 30, src/sass/_features.scss */
+.feature__text {
+  font-size: 1.7rem;
+}
+
+/* line 3, src/sass/_story.scss */
+.story__pictures {
+  background-color: #c69963;
+  grid-column: full-start / col-end 4;
+}
+
+/* line 8, src/sass/_story.scss */
+.story__content {
+  background-color: #f9f7f6;
+  grid-column: col-start 5 / full-end;
+}
+
+/* line 1, src/sass/_homes.scss */
+.homes {
+  background-color: #101d2c;
+  grid-column: center-start / center-end;
+}
+
+/* line 1, src/sass/_gallery.scss */
+.gallery {
+  background-color: #54483A;
+  grid-column: full-start / full-end;
+}
+
+/* line 1, src/sass/_footer.scss */
+.footer {
+  background-color: #101d2c;
+  grid-column: full-start / full-end;
+}
