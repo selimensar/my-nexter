@@ -39,19 +39,83 @@ body {
   font-weight: 400;
 }
 
-/* line 18, src/sass/_typography.scss */
+/* line 10, src/sass/_typography.scss */
+.heading-2 {
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1;
+}
+
+/* line 16, src/sass/_typography.scss */
+.heading-2--light {
+  color: #f9f7f6;
+}
+
+/* line 17, src/sass/_typography.scss */
+.heading-2--dark {
+  color: #54483A;
+}
+
+/* line 20, src/sass/_typography.scss */
+.heading-3 {
+  font-size: 1.6rem;
+  color: #c69963;
+  text-transform: uppercase;
+}
+
+/* line 29, src/sass/_typography.scss */
 .heading-4 {
   font-size: 1.9rem;
 }
 
-/* line 22, src/sass/_typography.scss */
+/* line 33, src/sass/_typography.scss */
 .heading-4--light {
-  color: #color-grey-light-1;
+  color: #f9f7f6;
 }
 
-/* line 23, src/sass/_typography.scss */
+/* line 34, src/sass/_typography.scss */
 .heading-4--dark {
-  color: #color-grey-dark-1;
+  color: #54483A;
+}
+
+/* line 38, src/sass/_typography.scss */
+.btn {
+  background-color: #c69963;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+/* line 50, src/sass/_typography.scss */
+.btn:hover {
+  background-color: #B28451;
+}
+
+/* line 55, src/sass/_typography.scss */
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+/* line 56, src/sass/_typography.scss */
+.mb-md {
+  margin-bottom: 3rem;
+}
+
+/* line 57, src/sass/_typography.scss */
+.mb-lg {
+  margin-bottom: 4rem;
+}
+
+/* line 58, src/sass/_typography.scss */
+.mb-hg {
+  margin-bottom: 8rem;
 }
 
 /* line 1, src/sass/_sidebar.scss */
@@ -113,18 +177,142 @@ body {
 .story__pictures {
   background-color: #c69963;
   grid-column: full-start / col-end 4;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(198, 153, 99, 0.5)), to(rgba(198, 153, 99, 0.5))), url(../img/back.jpg);
+  background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(../img/back.jpg);
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-/* line 8, src/sass/_story.scss */
+/* line 14, src/sass/_story.scss */
+.story__img--1 {
+  width: 100%;
+  grid-row: 2 / 6;
+  grid-column: 2 / 6;
+  -webkit-box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+}
+
+/* line 21, src/sass/_story.scss */
+.story__img--2 {
+  width: 115%;
+  grid-row: 4 / 6;
+  grid-column: 4 / 7;
+  z-index: 10;
+  -webkit-box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+/* line 30, src/sass/_story.scss */
 .story__content {
   background-color: #f9f7f6;
   grid-column: col-start 5 / full-end;
+  padding: 6rem 8vw;
+  /*
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;*/
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: start;
+}
+
+/* line 48, src/sass/_story.scss */
+.story__text {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 4rem;
 }
 
 /* line 1, src/sass/_homes.scss */
 .homes {
-  background-color: #101d2c;
   grid-column: center-start / center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem;
+}
+
+/* line 11, src/sass/_homes.scss */
+.home {
+  background-color: #f9f7f6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 3.5rem;
+}
+
+/* line 18, src/sass/_homes.scss */
+.home__img {
+  width: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  z-index: 1;
+}
+
+/* line 28, src/sass/_homes.scss */
+.home__like {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  fill: #c69963;
+  height: 2.5rem;
+  width: 2.5rem;
+  z-index: 2;
+  justify-self: end;
+  margin: 1rem;
+}
+
+/* line 39, src/sass/_homes.scss */
+.home__name {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  z-index: 3;
+  justify-self: center;
+  align-self: end;
+  width: 80%;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1.25rem;
+  font-weight: 400;
+  background-color: #101d2c;
+  color: #fff;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+/* line 60, src/sass/_homes.scss */
+.home__location, .home__rooms {
+  margin-top: 2.5rem;
+}
+
+/* line 65, src/sass/_homes.scss */
+.home__location, .home__rooms, .home__area, .home__price {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 75, src/sass/_homes.scss */
+.home__location svg, .home__rooms svg, .home__area svg, .home__price svg {
+  fill: #c69963;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+/* line 85, src/sass/_homes.scss */
+.home__btn {
+  grid-column: 1 / -1;
 }
 
 /* line 1, src/sass/_gallery.scss */
